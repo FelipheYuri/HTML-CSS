@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pro1.css">
+    <title>Projeto 1</title>
+</head>
+<body id="body">
+    <header>
+        <div>
+            <div>
+                <label for="text">Caixa: </label>
+                <input type="text" id="text" placeholder="Nome do elemento">
+                <input type="button" value="Cor" id="color">
+            </div>
+            <div>
+                <input type="button" value="Criar" id="create">
+                <input type="button" value="Remover" id="remove">
+            </div>
+        </div>
+        <div>
+            <img src="https://www.svgrepo.com/show/15365/check-box.svg" alt="selectall" id="select">
+        </div>
+    </header>
+
+    <section id="section"></section>
+    
+    <div id="blackWindow"></div>
+    <div id="blackWindow2"></div>
+
+    <div id="colorbox" class="colorbox">
+        <div class="boxcolor" id="red"></div>
+        <div class="boxcolor" id="orange"></div>
+        <div class="boxcolor" id="yellow"></div>
+        <div class="boxcolor" id="lime"></div>
+        <div class="boxcolor" id="green"></div>
+        <div class="boxcolor" id="cyan"></div>
+        <div class="boxcolor" id="blue"></div>
+        <div class="boxcolor" id="purple"></div>
+        <div class="boxcolor" id="pink"></div>
+        <div class="boxcolor" id="lightpink"></div>
+        <div class="boxcolor" id="white"></div>
+        <div class="boxcolor" id="grey"></div>
+        <div class="boxcolor" id="black"></div>
+    </div>
+
+    <script src="pro1.js"></script>
+</body>
+</html>
