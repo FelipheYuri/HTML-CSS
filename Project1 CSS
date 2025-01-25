@@ -360,6 +360,9 @@ body > section {
 
 .boxes {
     display: flex;
+    justify-content: space-between;
+
+    position: relative;
 
     width: 95%;
     height: auto;
@@ -690,6 +693,17 @@ body > section {
     white-space: nowrap;
 
     overflow-x: hidden;
+}
+
+.remove-icon {
+    height: 15px;
+    width: 15px;
+
+    position: relative;
+
+    top: 2px;
+
+    cursor: pointer;
 }
 
 @keyframes colorness-button {
