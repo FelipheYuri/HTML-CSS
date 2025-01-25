@@ -927,18 +927,28 @@ function createBox() {
                 let boxesText = document.createTextNode(textArea.value.trim());
                 let divBox = document.createElement("div");
                 let divText = document.createTextNode(textArea.value.trim());
+                let icon8 = document.createElement("img");
+                icon8.src = "https://static.vecteezy.com/system/resources/previews/021/352/964/large_2x/trash-icon-recycle-and-trash-sign-symbol-icon-free-png.png";
 
                 boxesSection.appendChild(boxes);
                 boxes.appendChild(boxesText);
+                boxes.appendChild(icon8);
                 boxes.classList.add("boxes");
 
                 div1_2.appendChild(divBox);
                 divBox.appendChild(divText);
                 divBox.classList.add("div-box");
+                icon8.classList.add("remove-icon")
     
                 textBox.style.display = "none";
                 blackWindow2.style.display = "none";
                 textArea.value = null;
+
+                icon8.addEventListener("click", () => {
+                    boxes.remove();
+                    divBox.remove();
+                });
+    
             }
 
         });
@@ -991,7 +1001,7 @@ document.addEventListener("keydown", function keyFunction() {
 
     textAreaContent.forEach(textElement => {
 
-        if (document.activeElement !== elementName && document.activeElement !== textElement) {
+        if (document.activeElement !== elementName && document.activeElement !== textElement && document.activeElement !== inputText) {
             if(((key == 'a' || key == 'A') && event.shiftKey) && selected == true) {
                 selectAll.style.backgroundColor = "rgba(100, 100, 255, 1)";
                 selected = false;
