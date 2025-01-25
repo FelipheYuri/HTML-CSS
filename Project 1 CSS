@@ -1,0 +1,729 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    scrollbar-width: thin;
+}
+
+body {
+    background-image: url("https://th.bing.com/th/id/OIP.AexpdL-h7eRM_YQ0H63TzAHaHa?w=200&h=183&c=7&r=0&o=5&pid=1.7");
+    background-repeat: repeat-y;
+    background-size: 100vw 100vh;
+}
+
+body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+
+    height: 100px;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    border: 2px solid black;
+    border-radius: 0 0 20px 20px;
+
+    position: sticky;
+    top: 0px;
+    backdrop-filter: blur(3px);
+    z-index: 2;
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header div > div {
+    margin-bottom: 5px;
+}
+
+header div > div label {
+    margin-right: 5px;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+header div > div:nth-child(1) input[type=button] {
+    margin-right: 5px;
+
+    width: 35px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border-radius: 0 8px 0 8px;
+
+    cursor: pointer;
+
+    animation-name: colorness-button;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+header div div:nth-child(2) input:nth-child(2) {
+    background-color: red;
+}
+
+header input[type=text] {
+    display: inline;
+    width: 150px;
+
+    font-size: 14px;
+    text-align: center;
+
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+header input[type=button] {
+    font-size: 20px;
+    width: 100px;
+    
+    border: 1px solid black;
+    border-radius: 20px;
+
+    background-color: rgb(100, 255, 100);
+    color: white;
+    text-shadow: 1px 1px black;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+header input[type=button]:hover {
+    background-color: rgb(100, 200, 100);
+}
+
+header div div:nth-child(2) input[type=button]:nth-child(2):hover {
+    background-color: rgb(180, 20, 20);
+}
+
+header input[type=button]:active {
+    transform: scale(0.9);
+}
+
+header > div:last-child img{
+    height: 20px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+header > div:last-child img:active{
+    transform: translateY(5px);
+}
+
+body > section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 5px;
+    padding: 0 20px;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 32%;
+    max-width: 275px;
+    min-width: 175px;
+    height: 225px;
+    margin: 3px;
+    padding: 2px;
+
+    background-color: aquamarine;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.container1-1 {
+    display: flex;
+    justify-content: space-between;
+
+    width: 93%;
+
+    position: relative;
+}
+
+.container1-1 div {
+    font-size: 24px;
+    color: black;
+    text-transform: capitalize;
+    text-shadow: 1px 1px white;
+
+    overflow-x: hidden;
+
+    white-space: nowrap;
+}
+
+.container1-1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 27px;
+    padding-right: 5px;
+
+    right: 0px;
+
+    position: absolute;
+}
+
+.container1-2 {
+    height: 150px;
+    width: 93%;
+
+    background-color: white;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    box-shadow: 0 1px 3px black;
+
+    overflow: hidden;
+}
+
+.container1-3 {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5px;
+    
+}
+
+.container1-3 input[type=button] {
+    height: 30px;
+    width: 50px;
+
+    font-size: 20px;
+
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px black;
+
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.container1-3 input[type=button]:hover {
+    background-color: #bbb;
+}
+
+.container1-3 input[type=button]:active {
+    transform: scale(0.9);
+}
+
+.icon1, .icon2 {
+    height: 20px;
+    border-radius: 9px;
+
+    margin-left: 5px;
+
+    cursor: pointer;
+}
+
+#blackWindow {
+    display: none;
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    opacity: 50%;
+
+    top: 0px;
+
+    z-index: 3;
+}
+
+#blackWindow2 {
+    display: none;
+
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    opacity: 50%;
+
+    top: 0px;
+
+    z-index: 5;
+}
+
+.box {
+    display: none;
+    flex-direction: column;
+
+    position: relative;
+
+    width: 60vw;
+    height: 55vh;
+
+    position: fixed;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: aquamarine;
+
+    top: 20vh;
+    left: 20vw;
+
+    z-index: 4;
+}
+
+.buttons-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 35px;
+    width: 100%;
+    padding: 0 5px;
+
+    border-radius: 10px 10px 0 0;
+    
+    background-color: white;
+}
+
+.feature-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.set-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    height: 25px;
+
+    cursor: pointer;
+    transition: 0.1s all ease;
+}
+
+.icons:active {
+    transform: translateY(3px);
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 30px;
+
+    width: 100%;
+    height: 30px;
+
+    font-size: 25px;
+    text-shadow: 1px 1px white;
+    text-transform: capitalize;
+
+    overflow-x: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.boxes-section {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 35px;
+    width: 100%;
+
+    overflow-y: scroll;
+}
+
+.boxes {
+    display: flex;
+
+    width: 95%;
+    height: auto;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    text-align: left;
+
+    background-color: white;
+    box-shadow: 1px 1px black;
+
+    border-radius: 0 10px 10px 0;
+    word-break: break-word;
+}
+
+.colorbox {
+    display: none;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+    position: fixed;
+
+    width: 60vw;
+    height: 20vh;
+    padding: 10px;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid black;
+    border-radius: 20px;
+
+    top: 37vh;
+    left: 20vw;
+
+    backdrop-filter: blur(3px);
+
+    z-index: 3;
+}
+
+.boxcolor {
+    height: 20%;
+    width: 7%;
+    margin: 0 2px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all 0.1s ease-in;
+}
+
+.boxcolor:hover {
+    border: 1px solid white;
+}
+
+#red {
+    background-color: rgb(250, 12, 12);
+}
+
+#orange {
+    background-color: rgb(225, 108, 5);
+}
+
+#yellow {
+    background-color: rgb(225, 214, 5);
+}
+
+#lime {
+    background-color: rgb(89, 225, 5);
+}
+
+#green {
+    background-color: rgb(5, 225, 5);
+}
+
+#cyan {
+    background-color: rgb(5, 225, 222);
+}
+
+#blue {
+    background-color: rgb(5, 15, 225);
+}
+
+#purple {
+    background-color: rgb(111, 5, 225);
+}
+
+#pink {
+    background-color: rgb(225, 5, 203);
+}
+
+#lightpink {
+    background-color: rgb(225, 5, 71);
+}
+
+#white {
+    background-color: white;
+}
+
+#grey {
+    background-color: grey;
+}
+
+#black {
+    background-color: black;
+}
+
+.edit-box {
+    display: none;
+    flex-direction: column;
+
+    width: 60vw;
+    height: 40vh;
+
+    top: 30vh;
+    left: 20vw;
+
+    position: absolute;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    z-index: 4;
+}
+
+.edit-button {
+    width: 50px;
+    height: 20px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    color: white;
+    text-shadow: 1px 1px black;
+    background-color: rgb(255, 255, 10);
+
+    cursor: pointer;
+
+    transition: all 0.1s ease;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30%;
+}
+
+.edit-input {
+    width: 150px;
+    height: 33%;
+    padding: 0 5px;
+
+    font-size: 18px;
+    text-align: center;
+
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.colors-box {
+    display: flex;
+    justify-content: center;
+
+    height: 58%;
+
+    border-radius: 0 0 10px 10px;
+}
+
+.any-color-box {
+    height: 15%;
+    width: 6%;
+    margin: 0 2px;
+
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all 0.1s ease-in;
+}
+
+.any-color-box:hover {
+    border: 2px solid white;
+}
+
+.any-color-box:active {
+    transform: scale(0.9);
+}
+
+.red {
+    background-color: rgb(250, 12, 12);
+}
+
+.orange {
+    background-color: rgb(225, 108, 5);
+}
+
+.yellow {
+    background-color: rgb(225, 214, 5);
+}
+
+.lime {
+    background-color: rgb(89, 225, 5);
+}
+
+.green {
+    background-color: rgb(5, 225, 5);
+}
+
+.cyan {
+    background-color: rgb(5, 225, 222);
+}
+
+.blue {
+    background-color: rgb(5, 15, 225);
+}
+
+.purple {
+    background-color: rgb(111, 5, 225);
+}
+
+.pink {
+    background-color: rgb(225, 5, 203);
+}
+
+.lightpink {
+    background-color: rgb(225, 5, 71);
+}
+
+.white {
+    background-color: white;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.black {
+    background-color: black;
+}
+
+.edit-button:hover {
+    background-color: rgb(200, 200, 75);
+}
+
+.edit-button:active {
+    transform: scale(0.9);
+}
+
+.add-box {
+    display: none;
+    flex-direction: column;
+    
+    position: absolute;
+
+    width: 45vw;
+    height: 35vh;
+
+    top: 33vh;
+    left: 28vw;
+
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    z-index: 6;
+}
+
+.out-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+
+    border: 2px solid black;
+    border-radius: 7px 7px 0 0;
+}
+
+.boxes-text {
+    width: 100%;
+    height: 100%;
+    padding: 2px 5px;
+
+    font-size: 18px;
+    border-radius: 0 0 6px 6px;
+
+    white-space: pre-wrap;
+    resize: none;
+}
+
+.add-button {
+    width: 50px;
+    height: 20px;
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+    color: white;
+    text-shadow: 1px 1px black;
+    background-color: rgb(100, 255, 100);
+
+    cursor: pointer;
+
+    transition: all 0.1s ease;
+}
+
+.add-button:hover {
+    background-color: rgb(100, 200, 100);
+}
+
+.add-button:active {
+    transform: scale(0.9);
+}
+
+.div-box {
+    display: flex;
+
+    width: 95%;
+    height: auto;
+    margin: 10px 0;
+    padding: 0 5px;
+    text-align: left;
+
+    background-color: white;
+    box-shadow: 1px 1px black;
+
+    border-radius: 0 10px 10px 0;
+    white-space: nowrap;
+
+    overflow-x: hidden;
+}
+
+@keyframes colorness-button {
+    0% {
+        background-color: rgb(250, 12, 12);
+    }
+    10% {
+        background-color: rgb(225, 108, 5);
+    }
+    20% {
+        background-color: rgb(225, 214, 5);
+    }
+    30% {
+        background-color: rgb(89, 225, 5);
+    }
+    40% {
+        background-color: rgb(5, 225, 5);
+    }
+    50% {
+        background-color: rgb(5, 225, 222);
+    }
+    60% {
+        background-color: rgb(5, 15, 225);
+    }
+    70% {
+        background-color: rgb(111, 5, 225);
+    }
+    80% {
+        background-color: rgb(225, 5, 203);
+    }
+    90% {
+        background-color: rgb(225, 5, 71);
+    }
+    100% {
+        background-color: rgb(225, 5, 5);
+    }
+}
